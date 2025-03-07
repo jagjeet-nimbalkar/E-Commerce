@@ -4,13 +4,13 @@
 
 <h2>Project Screenshots:</h2>
 
-![Home Page](Screenshots/Screenshot 2025-03-07 231702.png)
+![Home Page](Screenshots/first.png)
 
-![Product Page](Screenshots/Screenshot 2025-03-07 231717.png)
+![Product Page](Screenshots/second.png)
 
-![Checkout Page](Screenshots/Screenshot 2025-03-07 232142.png)
+![Checkout Page](Screenshots/third.png)
 
-![Checkout Page](Screenshots/Screenshot 2025-03-07 232218.png)
+![Checkout Page](Screenshots/fourth.png)
 
   
   
