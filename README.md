@@ -4,13 +4,13 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://photos.app.goo.gl/HAGRHsrDgWSVEdQ46" alt="project-screenshot" width="1500" height="550/">
+![Home Page](Screenshots/Screenshot 2025-03-07 231702.png)
 
-<img src="https://photos.google.com/share/AF1QipNbfVWuALJEMUguNW5xjoUVzBBYZLBRL8xgIrcWl5cAsw2NvJPUiztd5F3Mf9LOcA?key=eFRodDhUMU1OenE3OExqX0tlbGd6cWc3STl2cm9n" alt="project-screenshot" width="750" height="500/">
+![Product Page](Screenshots/Screenshot 2025-03-07 231717.png)
 
-<img src="https://photos.app.goo.gl/ZQar1K1Z6UDEwhkJ7" alt="project-screenshot" width="750" height="500/">
+![Checkout Page](Screenshots/Screenshot 2025-03-07 232142.png)
 
-<img src="https://photos.app.goo.gl/vEpwiRWiLMCZBWJB9" alt="project-screenshot" width="1500" height="550/">
+![Checkout Page](Screenshots/Screenshot 2025-03-07 232218.png)
 
   
   
