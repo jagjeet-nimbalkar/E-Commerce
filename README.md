@@ -2,15 +2,19 @@
 
 <p id="description">A modern and stylish e-commerce website UI built using HTML CSS Bootstrap and EJS templates. This project showcases a responsive and interactive shopping experience with features like hover effects featured products and a visually appealing layout.</p>
 
-<h2>Project Screenshots:</h2>
+## Project Screenshots:
 
 ![Home Page](Screenshots/first.png)
 
-![Product Page](Screenshots/second.png)
-
-![Checkout Page](Screenshots/third.png)
+<table>
+  <tr>
+    <td><img src="Screenshots/third.png" width="100%"></td>
+    <td><img src="Screenshots/second.png" width="100%"></td>
+  </tr>
+</table>
 
 ![Checkout Page](Screenshots/fourth.png)
+
 
   
   
@@ -30,13 +34,13 @@ Here're some of the project's best features:
 <p>1. Clone the repository:</p>
 
 ```
-git clone https://github.com/yourusername/ecommerce.git
+git clone https://github.com/jagjeet-nimbalkar/E-Commerce.git
 ```
 
 <p>2. Go working directory</p>
 
 ```
-cd ecommerce-frontend
+cd E-Commerce
 ```
 
 <p>3. Run</p>
