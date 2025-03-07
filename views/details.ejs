@@ -1,0 +1,49 @@
+<% layout("/Layout/boilerplate") %>
+<div class="newproducts">
+    <div class="container">    
+        <div class="ijare">
+            <h3>All Products</h3>
+            <select>
+                <option>Short By</option>
+                <option>Short by price</option>
+                <option>Short by rating</option>
+                <option>Short by popularity</option>
+                <option>Short by reviews</option>
+            </select>
+        </div>
+        <div class="container details">
+            <div class="row">
+                <% if (details) { %>
+                    <% for (let detail of details) { %>
+                        <a href="/view/<%= detail.id %>" class="col-md-3 col-sm-6 simple">
+                            <div class="card">
+                                <div class="holographic-container">
+                                    <div class="holographic-card">
+                                        <img class="card-img-top" src="<%= detail.image %>" alt="Card image cap">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= detail.title %></h5>
+                                    <div class="rating">
+                                        <p>
+                                            <% for (let i = 0; i < detail.rating; i++) { %>
+                                                <i class="fa fa-star stars"></i>
+                                            <% } %>
+                                        </p>                    
+                                    </div>
+                                    <p>Price: $<%= detail.price %></p>
+                                </div>
+                            </div>
+                        </a>                        
+                    <% } %>
+                <% } %>
+            </div>
+        </div>              
+        <div class="btns">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+    </div>  
+</div>

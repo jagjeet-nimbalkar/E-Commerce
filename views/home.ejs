@@ -1,0 +1,203 @@
+<% layout("/Layout/boilerplate") %>
+<body>
+    <div class="product-d">
+        <div class="row Trending">
+            <div class="col-4">
+                    <h2>Find Out Trending Tech Gadgets</h2>
+                    <p>Explore the latest tech gadgets that combine innovation and style. Find the perfect products to elevate your tech game.</p>
+                   <a href="/home/item" style="text-decoration: none; color: black;"><button type="button" class="btn explore rounded-pill" >Explore Now &nbsp;<i class="fa-solid fa-arrow-right"></i></button></a>
+                </div>
+            <div class="col-4">
+                    <img class="front-img" src="/assets/imaage1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="featured">
+                <div class="row col-12 offset-lg-1">
+                        <div class="col-lg-3 first ">
+                            <i class="fa-regular fa-heart overlay-icon"></i>
+                            <img src="/assets/shoe.png" alt="image">
+                        </div>      
+                        <div class="col-lg-3 second">
+                            <i class="fa-regular fa-heart overlay-icon"></i>
+                            <img src="/assets/shoe2.png" alt="image">
+                        </div>
+                        <div class="col-lg-3 third">
+                            <i class="fa-regular fa-heart overlay-icon"></i>
+                            <img src="/assets/shoe3.png" alt="image">
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+           <h2 class="title">Featured Products</h2>
+        <div class="new-arrivals">
+            <div class="row col-12">
+                <div class="col-md-3 col-sm-6 simple">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/t-shirt.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" name="title" >Believe Printed T-shirt</h5>
+                            <div class="rating">
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Price: $50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 simple">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/t-shirt3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Black Bond T-shirt</h5>
+                            <div class="rating">
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Price: $45</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 simple" >
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/shirt.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">pink shirt</h5>
+                            <div class="rating">
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Price: $75</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 simple" >
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/tshirt4.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">White Printed T-shirt</h5>
+                            <div class="rating">
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                                <i class="fa fa-star stars"></i>
+                            </div>
+                            <p>Price: $60</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new arrivals -->
+<div class="newproducts">
+    <div class="container  ">
+        <h2 class="title">NEW ARRIVALS</h2>
+        <div class="row">
+            <% if (details && details.length > 0) { %>
+                <% const limitedDetails = details.slice(0, 8); %> 
+                <% for (let detail of limitedDetails) { %>
+                    <div class="col-md-3 col-sm-6 simple">
+                        <div class="card">
+                            <div class="holographic-container">
+                                <div class="holographic-card">
+                                    <img class="card-img-top" src="<%= detail.image %>" alt="Card image cap">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= detail.title %></h5>
+                                <div class="rating">
+                                    <i class="fa fa-star stars"></i>
+                                    <i class="fa fa-star stars"></i>
+                                    <i class="fa fa-star stars"></i>
+                                    <i class="fa fa-star stars"></i>
+                                    <i class="fa fa-star stars"></i>
+                                </div>
+                                <p>Price: $<%= detail.price %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <p>No items available</p>
+            <% } %>
+        </div>
+    </div>
+</div> 
+    <div class="product-end">
+        <div class="row Trending">
+            <div class="col-4">
+                    <img class="band" src="/assets/band.png" alt="">
+            </div>
+            <div class="col-4">
+                    <h2>Smart Fitness Band</h2>
+                    <p>Unleash the power of innovation with the latest smart fitness bands. Experience the perfect blend of style, performance, and cutting-edge technology to level up your fitness game!</p>
+                    <button  type="button" class="btn explore rounded-pill" >Details &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Single Row with 3 Cards in a line -->
+            <div class="col-md-4">
+                <div class="card shadow-lg rounded-3">
+                    <div class="card-body text-center">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-muted"></i>
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="User Avatar" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        <h5 class="card-title fw-bold mb-3" style="padding:1rem 0 0 1rem;">John Doe</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg rounded-3">
+                    <div class="card-body text-center">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-muted"></i>
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="User Avatar" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        <h5 class="card-title fw-bold mb-3" style="padding:1rem 0 0 1rem;">John Doe</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg rounded-3">
+                    <div class="card-body text-center">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-muted"></i>
+                        </div>
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="User Avatar" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        <h5 class="card-title fw-bold mb-3" style="padding:1rem 0 0 1rem;">John Doe</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

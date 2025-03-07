@@ -1,0 +1,394 @@
+.product-d{
+    width: 100%; 
+    padding: 15px; 
+    box-sizing: border-box;
+    background: #6D6027;
+    background: -webkit-linear-gradient(#7b6f37, #ffffff);
+    background: linear-gradient(#a8953f, #fff9ed);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+.content {
+    width: 100%;
+    flex: 1;
+}
+
+.Trending{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-4{
+    font-family: sans-serif;
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-4 h2{
+    font-weight: bolder;
+}
+
+.col-4 img{
+    height: 500px;
+    max-width: 100%; /* Prevent image overflow */
+    padding: 50px 0;
+}
+
+.col-4 button{
+    background-color: chocolate;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-4 button:hover{
+    background-color: chocolate;
+    opacity: 0.9;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.new-arrivals{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body{
+    border: none;
+    background-color: transparent;
+}
+
+.featured {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.col-lg-3 {
+    flex-basis: 30%;
+    min-width: 300px;
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.col-lg-3 img {
+    height: 100%;
+    transition: opacity 0 ease-in-out;
+    width: 100%; 
+}
+
+.first::before, .second::before, .third::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%;
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.first::before {
+    background-image: url('/assets/shoe11.png');
+}
+
+.second::before {
+    background-image: url('/assets/shoe22.png');
+}
+
+.third::before {
+    background-image: url('/assets/shoe33.png');
+}
+
+.col-lg-3:hover::before {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.col-lg-3:hover .overlay-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#footer {
+    margin-top: 0.5rem;
+    background-color: #304146;
+    color: white;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.overlay-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.new-arrivals .row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 2rem;
+    border: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 300px;
+}
+
+.card-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: large;
+}
+
+.title{
+    text-align: center;
+    margin: 50px auto 50px;
+    position: relative;
+    line-height: 60px;
+}
+
+.title::after,
+.title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.title::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.title:hover::after,
+.title:hover::before {
+    transform: scaleX(1);
+}
+
+.stars{
+    color: orange;
+}
+
+.holographic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background: #000; */
+}
+
+.holographic-card {
+    width: 300px;
+    height: auto;
+    /* background: #111; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 15px; */
+    transition: all 0.5s ease;
+}
+
+.holographic-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      0deg, 
+      transparent, 
+      transparent 30%, 
+      rgba(0,255,255,0.3)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.holographic-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+.holographic-card:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+.product-end{
+    margin-top: 15px;
+    width: 100%; 
+    padding: 15px; 
+    box-sizing: border-box;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient( #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(#4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: 5px;
+}
+
+.ijare{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ijare select{
+    height: 30px;
+}
+
+.btns span{
+    margin: 1rem 0 0 0.5rem;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.details .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.simple {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 23%; /* Adjust based on the number of items you want per row */
+}
+.split{
+    padding: 20px;
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+}
+.split .one select{
+    height: 40px;
+    padding: 8px;
+}
+.split .one select option{
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.split .two button{
+    background-color: chocolate;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image {
+    object-fit: cover ;
+}
+.image img{
+    width: 100%;
+    height: 500px;
+}
+@media (max-width: 768px) {
+    .col-4 {
+        flex-basis: 100%; /* Ensure full-width on small screens */
+    }
+
+    .col-3 {
+        flex-basis: 100%; /* Ensure full-width on small screens */
+    }
+
+    .col-4 img {
+        max-width: 100%;  /* Ensure image doesn't overflow */
+    }
+
+    .new-arrivals {
+        justify-content: center; /* Center the new arrivals on smaller screens */
+    }
+}
+.main-navbar{
+    border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar{
+    background-color: #265b64;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name{
+    color: #fff;
+}
+.main-navbar .top-navbar .nav-link{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu{
+    padding: 0px 0px;
+    border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+    width: 20px;
+
+    text-align: center;
+    color: #2874f0;
+    font-size: 14px;
+}
+.main-navbar .navbar{
+    padding: 0px;
+    background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link{
+    padding: 8px 20px;
+    color: #000;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

@@ -1,0 +1,72 @@
+<% layout("/Layout/boilerplate") %>
+<div class="container">
+    <div class="row col-10 pt-4 offset-lg-2">
+        <% if (detail) { %>
+            <div class="col-5 image">
+                <img src="<%= detail.image %>" alt="Image">
+            </div>
+            <div class="col-5">
+                <h4>Type/ <%= detail.type %></h4>
+                <h1 style="font-weight: 800;"><%= detail.title  %></h1>
+                <h5> <b>Product Details:</h5>
+                    <p></b><%= detail.description %></p>
+                    <h5 style="font-weight: bolder;" >Price: $<%= detail.price %></h5>
+                    <div class="rating">
+                        <p> 
+                            <% for (let i = 0; i < detail.rating; i++) { %>
+                                <i class="fa fa-star stars"></i>
+                                <% } %>
+                            </p>                    
+                    </div>
+                <div class="split">
+                    <div class="one">
+                        <select>
+                            <option>Select Size</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>XL</option>
+                            <option>XXL</option>
+                        </select>
+                    </div>
+                    <div class="two">
+                        <a href="#" style="text-decoration: none; color: black;"><button type="button" class="btn explore rounded-pill" >Add To Cart</button></a>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <p>Product not found!</p>
+        <% } %>
+    </div>
+    <hr>
+    <div class="container details">
+        <div class="row">
+            <% if (details && details.length > 0) { %>
+                <% const limitedDetails = details.slice(0, 8); %> 
+                <% for (let detail of limitedDetails) { %>
+                    <a href="/view/<%= detail.id %>" class="col-md-3 col-sm-6 simple">
+                        <div class="card">
+                            <div class="holographic-container">
+                                <div class="holographic-card">
+                                    <img class="card-img-top" src="<%= detail.image %>" alt="Card image cap">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= detail.title %></h5>
+                                <div class="rating">
+                                    <p>
+                                        <% for (let i = 0; i < detail.rating; i++) { %>
+                                            <i class="fa fa-star stars"></i>
+                                        <% } %>
+                                    </p>                    
+                                </div>
+                                <p>Price: $<%= detail.price %></p>
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <p>No items available</p>
+                        <% } %>
+                    </a>                        
+        </div>
+    </div> 
+</div>
